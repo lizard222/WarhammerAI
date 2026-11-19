@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-11-19T14:27:56.052829+00:00",
+  "checks": [
+    "15 product cards and local images",
+    "category filter via REST API",
+    "login through browser form",
+    "real AI recommendations shown in the browser",
+    "add recommendation to cart",
+    "checkout and persistent order history",
+    "390px responsive layout without horizontal overflow"
+  ],
+  "javascript_errors": [],
+  "passed": true
+}

@@ -1,0 +1,96 @@
+{
+  "verified_at": "2026-11-19T14:26:14.707166+00:00",
+  "health": {
+    "service": "warhammer-recommendations",
+    "status": "ok",
+    "version": "1.0.0",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "request": {
+    "preferences": "Я новичок. Хочу начать собирать космодесант и попробовать покраску.",
+    "budget": "6000",
+    "max_items": 3
+  },
+  "response": {
+    "items": [
+      {
+        "product": {
+          "id": 2,
+          "name": "Гвардия Ворона",
+          "faction": {
+            "id": 1,
+            "name": "Империум",
+            "description": "Товары фракции «Империум».",
+            "logo": "http://testserver/media/factions/loyal.jpg"
+          },
+          "product_type": "STARTER_SET",
+          "category_label": "Стартовые наборы",
+          "description": "Небольшой стартовый набор для любителей скрытного космодесанта. Удобный первый проект для сборки и покраски чёрных доспехов.",
+          "price": "2500.00",
+          "discounted_price": "2250.00",
+          "stock": 6,
+          "image": "http://testserver/media/products/ravenguards.webp",
+          "tags": "космодесант чёрный новичок старт",
+          "beginner_friendly": true,
+          "image_source": ""
+        },
+        "quantity": 1,
+        "reason": "Набор для новичков, содержит космодесант и позволяет попробовать покраску чёрных доспехов",
+        "total_price": "2250.00"
+      },
+      {
+        "product": {
+          "id": 12,
+          "name": "Citadel Base: Abaddon Black",
+          "faction": null,
+          "product_type": "PAINT",
+          "category_label": "Краски",
+          "description": "Чёрная базовая краска для доспехов, оружия и деталей. Универсальный цвет для большинства схем покраски и Гвардии Ворона.",
+          "price": "450.00",
+          "discounted_price": "450.00",
+          "stock": 18,
+          "image": "http://testserver/media/products/black.jpg",
+          "tags": "краска чёрный гвардия ворона покраска",
+          "beginner_friendly": true,
+          "image_source": "https://www.wargamesemporium.co.uk/products/citadel-base-paint-abaddon-black?_pos=1&_psq=abaddon+black&_psid=41d75059a&_ss=e"
+        },
+        "quantity": 1,
+        "reason": "Чёрная краска необходима для покраски Гвардии Ворона",
+        "total_price": "450.00"
+      },
+      {
+        "product": {
+          "id": 13,
+          "name": "Warhammer Colour: базовая кисть",
+          "faction": null,
+          "product_type": "ACCESSORY",
+          "category_label": "Аксессуары",
+          "description": "Кисть для нанесения базовых цветов на миниатюры. Подходит начинающим художникам и для повседневной работы с акриловыми красками.",
+          "price": "650.00",
+          "discounted_price": "650.00",
+          "stock": 15,
+          "image": "http://testserver/media/products/brush.jpg",
+          "tags": "кисть покраска новичок инструменты",
+          "beginner_friendly": true,
+          "image_source": "https://www.wargamesemporium.co.uk/products/warhammer-colour-base-brush-medium?_pos=1&_psq=base+brush+medium&_psid=ea552ad4c&_ss=e"
+        },
+        "quantity": 1,
+        "reason": "Кисть необходима для покраски миниатюр",
+        "total_price": "650.00"
+      }
+    ],
+    "total_price": "3350.00",
+    "budget": "6000.00",
+    "explanation": "Подбор проверен по текущим ценам и наличию. Все выбранные товары вместе укладываются в бюджет.",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "cached": false
+  },
+  "http_status": 200,
+  "checks": [
+    "real deployed Worker",
+    "real Workers AI inference",
+    "valid stock",
+    "total within budget",
+    "server arithmetic"
+  ]
+}

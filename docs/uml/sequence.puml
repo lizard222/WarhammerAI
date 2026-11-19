@@ -1,0 +1,22 @@
+@startuml
+actor "Покупатель" as Buyer
+participant "Веб / GUI-клиент" as Client
+participant "Django API" as Django
+database SQLite
+participant "Cloudflare Worker" as Worker
+participant "Workers AI" as AI
+Buyer -> Client: Пожелания и бюджет
+Client -> Django: POST /api/v1/recommendations/
+Django -> Django: Авторизация, валидация, кеш
+Django -> SQLite: Доступные товары и текущие цены
+SQLite --> Django: Кандидаты
+Django -> Worker: POST /recommendations, Bearer key
+Worker -> Worker: Валидация; промпт и JSON Schema
+Worker -> AI: env.AI.run(model, messages)
+AI --> Worker: items: product_id, quantity, reason
+Worker -> Worker: Проверка идентификаторов и бюджета
+Worker --> Django: JSON: items, model
+Django -> Django: Проверка цен и остатков; сумма; кеш
+Django --> Client: HTTP 200: товары и объяснения
+Client --> Buyer: Карточки рекомендованных товаров
+@enduml

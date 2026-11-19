@@ -1,0 +1,30 @@
+digraph G {graph [fontname="Times New Roman", fontsize=18, bgcolor="white", pad="0.3"]; node [fontname="Times New Roman", fontsize=15, shape=box, style="rounded", margin="0.16,0.10"]; edge [fontname="Times New Roman", fontsize=12]; rankdir=TB;
+    subgraph cluster_pc { label="«device» Компьютер пользователя"; fontname="Times New Roman"; fontsize=18;
+      browser [label="«executionEnvironment»
+Веб-браузер"];
+      desktop [label="«executionEnvironment»
+Python + Tkinter"];
+    }
+    subgraph cluster_server { label="«node» Сервер магазина (локальная сеть)"; fontname="Times New Roman"; fontsize=18;
+      django [label="«artifact»
+Django application
+port 8000"];
+      sqlite [shape=cylinder, label="«artifact»
+db.sqlite3"];
+      media [label="«artifact»
+Локальные изображения"];
+    }
+    subgraph cluster_cf { label="«node» Cloudflare"; fontname="Times New Roman"; fontsize=18;
+      worker [label="«executionEnvironment»
+Workers
+worker.mjs"];
+      ai [label="«executionEnvironment»
+Workers AI / GPU
+Llama 3.3 70B"];
+    }
+    browser -> django [label="HTTP / JSON"];
+    desktop -> django [label="HTTP / JSON"];
+    django -> sqlite [dir=none]; django -> media [dir=none];
+    django -> worker [label="HTTPS / JSON"];
+    worker -> ai [label="AI binding"];
+    }

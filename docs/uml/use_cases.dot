@@ -1,0 +1,25 @@
+digraph G {graph [fontname="Times New Roman", fontsize=18, bgcolor="white", pad="0.3"]; node [fontname="Times New Roman", fontsize=15, shape=box, style="rounded", margin="0.16,0.10"]; edge [fontname="Times New Roman", fontsize=12]; rankdir=LR;
+    buyer [label="«actor»
+Покупатель", style=""];
+    admin [label="«actor»
+Администратор", style=""];
+    model [label="«actor»
+Workers AI", style=""];
+    subgraph cluster_system { label="Warhammer AI Store"; fontname="Times New Roman"; fontsize=19;
+      node [shape=ellipse];
+      catalog [label="Просмотреть и
+отфильтровать каталог"];
+      login [label="Войти в аккаунт"];
+      recommend [label="Получить подбор
+товаров по пожеланиям"];
+      cart [label="Изменить корзину"];
+      order [label="Оформить заказ"];
+      history [label="Просмотреть
+свои заказы"];
+      manage [label="Управлять каталогом
+и остатками"];
+    }
+    buyer -> catalog; buyer -> login; buyer -> recommend; buyer -> cart; buyer -> order; buyer -> history;
+    admin -> manage; admin -> login;
+    recommend -> model [dir=none];
+    }

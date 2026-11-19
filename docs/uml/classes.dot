@@ -1,0 +1,16 @@
+digraph G {graph [fontname="Times New Roman", fontsize=18, bgcolor="white", pad="0.3"]; node [fontname="Times New Roman", fontsize=15, shape=box, style="rounded", margin="0.16,0.10"]; edge [fontname="Times New Roman", fontsize=12]; rankdir=TB; node [shape=record, style=""];
+    User [label="{User (Django)|id: int\lusername: str\lis_staff: bool\l}"];
+    Faction [label="{Faction|name: str\ldescription: str\l}"];
+    Product [label="{Product|name: str\lprice: Decimal\lstock: int\ltags: str\lbeginner_friendly: bool\l|get_discounted_price(): Decimal\l}"];
+    Cart [label="{Cart|created_at: datetime\l}"];
+    CartItem [label="{CartItem|quantity: int\l|total_price(): Decimal\l}"];
+    Order [label="{Order|total_price: Decimal\lstatus: str\lcreated_at: datetime\l}"];
+    OrderItem [label="{OrderItem|product_name: str\lunit_price: Decimal\lquantity: int\l|total_price(): Decimal\l}"];
+    User -> Cart [dir=none, taillabel="1", headlabel="0..1"];
+    User -> Order [dir=none, taillabel="1", headlabel="0..*"];
+    Faction -> Product [dir=none, taillabel="0..1", headlabel="0..*"];
+    Cart -> CartItem [dir=both, arrowtail=diamond, arrowhead=none, taillabel="1", headlabel="0..*"];
+    Product -> CartItem [dir=none, taillabel="1", headlabel="0..*"];
+    Order -> OrderItem [dir=both, arrowtail=diamond, arrowhead=none, taillabel="1", headlabel="1..*"];
+    Product -> OrderItem [dir=none, taillabel="0..1", headlabel="0..*"];
+    }

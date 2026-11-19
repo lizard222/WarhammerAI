@@ -1,0 +1,28 @@
+digraph G {graph [fontname="Times New Roman", fontsize=18, bgcolor="white", pad="0.3"]; node [fontname="Times New Roman", fontsize=15, shape=box, style="rounded", margin="0.16,0.10"]; edge [fontname="Times New Roman", fontsize=12]; rankdir=TB;
+    web [label="«component»
+Веб-клиент
+HTML / CSS / JavaScript"];
+    gui [label="«component»
+Настольный клиент
+Python / Tkinter"];
+    api [label="«component»
+Сервис магазина
+Django REST Framework"];
+    db [shape=cylinder, label="«database»
+SQLite"];
+    cloud [label="«component»
+Сервис рекомендаций
+Cloudflare Worker"];
+    ai [label="«external service»
+Workers AI
+Llama 3.3 70B"];
+    web -> api [label="REST / JSON
+Token"];
+    gui -> api [label="REST / JSON
+Token"];
+    api -> db [label="Django ORM"];
+    api -> cloud [label="HTTPS / JSON
+Bearer service key"];
+    cloud -> ai [label="AI binding
+env.AI.run()"];
+    }

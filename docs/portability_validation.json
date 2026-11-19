@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "verified_at": "2026-11-19T14:49:58.640587+00:00",
+  "checks": [
+    "fresh SQLite database",
+    "only .env.example values",
+    "15 products",
+    "idempotent seed",
+    "all local image files",
+    "token login",
+    "cart discount 2250.00",
+    "persistent order",
+    "OpenAPI"
+  ],
+  "runtime": "3.11.4",
+  "reused_dependencies": true
+}

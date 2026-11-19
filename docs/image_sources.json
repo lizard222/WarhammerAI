@@ -1,0 +1,86 @@
+{
+  "intercessors": {
+    "title": "Space Marines: Intercessor Squad",
+    "page": "https://www.wargamesemporium.co.uk/products/space-marines-intercessor-squad-2026",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2026_09_99120101496_SpaceMarinesIntercessorSquad07.jpg?v=1789729748",
+    "file": "products/intercessors.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "orks": {
+    "title": "Orks: Boyz",
+    "page": "https://www.wargamesemporium.co.uk/products/orks-boyz-1",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2026_08_99120103136_OrksBoyz07.jpg?v=1787309436",
+    "file": "products/orks.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "aeldari": {
+    "title": "Aeldari: Guardians",
+    "page": "https://www.wargamesemporium.co.uk/products/aeldari-guardians",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/products/https___trade.games-workshop.com_assets_2022_02_99120104067_AELGuardiansStock.jpg?v=1645870526",
+    "file": "products/aeldari.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "necrons": {
+    "title": "Necrons: Warriors",
+    "page": "https://www.wargamesemporium.co.uk/products/necron-warriors-1",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/products/TR-49-06-99120110052-Necrons-NecronWarriors__1.jpg?v=1602322404",
+    "file": "products/necrons.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "starter": {
+    "title": "Warhammer 40,000: Combat Patrol Starter Set",
+    "page": "https://www.wargamesemporium.co.uk/products/warhammer-40-000-ultimate-starter-set",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2023_07_60010199067_WH40kUltimateStarterSet1.jpg?v=1689413704",
+    "file": "products/starter.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "introductory": {
+    "title": "Warhammer 40,000: Introductory Set",
+    "page": "https://www.wargamesemporium.co.uk/products/warhammer-40-000-introductory-set-1",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/60010199079_ENGWH40KIntroductorySetBox.jpg?v=1783760743",
+    "file": "products/introductory.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "paints": {
+    "title": "Warhammer 40,000: Paints + Tools",
+    "page": "https://www.wargamesemporium.co.uk/products/warhammer-40-000-paints-tools",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2026_07_BSF-5217019900260-12Warhammer40000PaintsPlusTools-ENGSPAPORTLATVROM.jpg?v=1783761089",
+    "file": "products/paints.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "blue": {
+    "title": "Warhammer Colour: Base - Macragge Blue",
+    "page": "https://www.wargamesemporium.co.uk/products/citadel-base-paint-macragge-blue",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2026_03_BSF-21-08-99189950272-MACRAGGEBLUE12MLROW__1.jpg?v=1774635910",
+    "file": "products/blue.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "black": {
+    "title": "Warhammer Colour: Base - Abaddon Black",
+    "page": "https://www.wargamesemporium.co.uk/products/citadel-base-paint-abaddon-black",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2026_03_BSF-21-25-99189950289-ABADDONBLACK12MLROW.jpg?v=1774636401",
+    "file": "products/black.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "brush": {
+    "title": "Warhammer Colour: Base Brush - Medium",
+    "page": "https://www.wargamesemporium.co.uk/products/warhammer-colour-base-brush-medium",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2026_05_BSA-63-06-99199999100-WarhammerColourBaseBrushMedium.jpg?v=1792148671",
+    "file": "products/brush.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "dice": {
+    "title": "Warhammer 40,000: Iron Hands Dice",
+    "page": "https://www.wargamesemporium.co.uk/products/warhammer-40-000-iron-hands-dice",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2025_10_99220101038_SpaceMarineIronHandsDice02_1.png?v=1760088682",
+    "file": "products/dice.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  },
+  "book": {
+    "title": "Warhammer 40,000: Core Rules",
+    "page": "https://www.wargamesemporium.co.uk/products/warhammer-40-000-core-rules",
+    "image_url": "https://cdn.shopify.com/s/files/1/0800/4331/files/https___trade.games-workshop.com_assets_2026_06_60040199194_ENGArmageddonCoreRulesBook01.jpg?v=1781268247",
+    "file": "products/book.jpg",
+    "note": "Фотография товара для учебной демонстрации. Права принадлежат правообладателям."
+  }
+}

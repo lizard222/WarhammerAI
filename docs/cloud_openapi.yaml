@@ -1,0 +1,103 @@
+openapi: 3.0.3
+info:
+  title: Warhammer Recommendations Worker
+  version: 1.0.0
+  description: Отдельный облачный REST-сервис подбора товаров через Workers AI.
+servers:
+  - url: https://warhammer-ai-recommendations.canadyleon58.workers.dev
+paths:
+  /health:
+    get:
+      summary: Доступность опубликованного Worker
+      responses:
+        '200':
+          description: Метаданные сервиса
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  service: {type: string}
+                  status: {type: string}
+                  version: {type: string}
+                  model: {type: string}
+  /recommendations:
+    post:
+      summary: Подбор среди переданных товаров-кандидатов
+      security:
+        - ServiceKey: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RecommendationRequest'
+      responses:
+        '200':
+          description: Проверенные рекомендации
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecommendationResponse'
+        '400': {$ref: '#/components/responses/Error'}
+        '401': {$ref: '#/components/responses/Error'}
+        '405': {$ref: '#/components/responses/Error'}
+        '413': {$ref: '#/components/responses/Error'}
+        '415': {$ref: '#/components/responses/Error'}
+        '502': {$ref: '#/components/responses/Error'}
+        '503': {$ref: '#/components/responses/Error'}
+components:
+  securitySchemes:
+    ServiceKey:
+      type: http
+      scheme: bearer
+      description: Отдельный ключ SERVICE_API_KEY из настроек Worker.
+  responses:
+    Error:
+      description: Ошибка запроса, авторизации или модели; подробности в поле detail.
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [detail]
+            properties:
+              detail: {type: string}
+  schemas:
+    ProductCandidate:
+      type: object
+      required: [id, name, price, stock]
+      properties:
+        id: {type: integer, minimum: 1}
+        name: {type: string, maxLength: 200}
+        price: {type: string, pattern: '^[0-9]+(\.[0-9]{1,2})?$'}
+        stock: {type: integer, minimum: 0}
+        description: {type: string, maxLength: 600}
+        faction: {type: string}
+        category: {type: string}
+        tags: {type: string}
+        beginner_friendly: {type: boolean}
+    RecommendationRequest:
+      type: object
+      required: [preferences, budget, products]
+      properties:
+        preferences: {type: string, minLength: 5, maxLength: 1200}
+        budget: {type: string, description: Общий бюджет от 1 до 1000000 рублей.}
+        max_items: {type: integer, minimum: 1, maximum: 5, default: 3}
+        products:
+          type: array
+          maxItems: 50
+          items: {$ref: '#/components/schemas/ProductCandidate'}
+    RecommendationResponse:
+      type: object
+      required: [items, model]
+      properties:
+        model: {type: string}
+        items:
+          type: array
+          items:
+            type: object
+            required: [product_id, quantity, reason]
+            properties:
+              product_id: {type: integer}
+              quantity: {type: integer, minimum: 1}
+              reason: {type: string, maxLength: 700}

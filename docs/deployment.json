@@ -1,0 +1,8 @@
+{
+  "url": "https://warhammer-ai-recommendations.canadyleon58.workers.dev",
+  "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "worker_name": "warhammer-ai-recommendations",
+  "deployed": true,
+  "deployment_id": "bbd8630e18404715b4a22eb601436753",
+  "platform": "Cloudflare Workers + Workers AI"
+}
